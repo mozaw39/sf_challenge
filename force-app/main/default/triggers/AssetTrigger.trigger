@@ -1,3 +1,3 @@
-trigger AssetTrigger on Asset (after insert, before delete) {
+trigger AssetTrigger on Asset (before insert, after insert) {
     new AssetTriggerHandler().run();
 }
