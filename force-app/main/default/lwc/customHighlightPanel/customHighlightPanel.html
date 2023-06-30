@@ -1,0 +1,20 @@
+<template>
+    <div class="slds-page-header slds-page-header_record-home">
+        <div class="slds-page-header__row slds-page-header__row_gutters">
+            <div class="slds-page-header__col-details">
+                <lightning-record-view-form
+                        record-id={recordId}
+                        object-api-name={objectApiName}>
+ 
+                    <ul class="slds-page-header__detail-row" style="padding-left: 12px;">
+                        <template for:each={fieldList} for:item="field" for:index="index">
+                            <li key={field} class="slds-page-header__detail-block">
+                                <lightning-output-field field-name={field} style="padding:0;"></lightning-output-field>
+                            </li>
+                        </template>
+                    </ul>
+                </lightning-record-view-form>
+            </div>
+        </div>
+    </div>
+</template>

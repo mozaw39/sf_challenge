@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Id__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Unique external Id for the asset. 
+
+format: {prefix}-{product code}-{increment}
+
+prefix: the prefix depends on the record type mapping is as follow 
+Graphic card &gt; GC
+Processor &gt; CPU
+Motherboard &gt; MB
+Other &gt; O
+
+Product code: value of the field ProductCode from the Product2 Object
+
+Increment: an incremental number in this form {00000}, for each asset, with the same prefix and product code, this number should be increased by one.</description>
+    <externalId>true</externalId>
+    <label>External Id</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>
