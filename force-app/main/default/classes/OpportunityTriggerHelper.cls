@@ -47,7 +47,6 @@ public with sharing class OpportunityTriggerHelper {
                 identifierAssetMap.put(assetIdentifier, nAssets);
             }
             assetElement.External_Id__c = newAssetIdentifier;
-            //assetsToUpdate.add(assetToUpdate);
             System.debug('newAssetIdentifier:' + newAssetIdentifier);
         }
         for(Asset assetElement: assetsToCreate){
@@ -60,7 +59,6 @@ public with sharing class OpportunityTriggerHelper {
                 identifierAssetMap.put(assetIdentifier, nAssets);
             }
             assetElement.External_Id__c = newAssetIdentifier;
-            //assetsToUpdate.add(assetToUpdate);
             System.debug('newAssetIdentifier:' + newAssetIdentifier);
         }
         //calculate identifier reference
