@@ -1,0 +1,34 @@
+<template>
+    <!-- <div onkeyup={handleKeyUp}>
+        <lightning-input
+            name="enter-search"
+            label="Campaign Name"
+            type="search"
+        ></lightning-input>
+    </div>
+    <p if:true={queryTerm}>
+        Searched for {queryTerm}!
+    </p>
+    <lightning-button
+        variant="brand"
+        label="Submit"
+        onclick={handleClick}
+        style="color: green;"
+    >
+    </lightning-button> -->
+    <lightning-record-edit-form record-id="" object-api-name="Opportunity"
+            onsuccess={handleSuccess} onsubmit={handleSubmit}>
+            <div style="margin-bottom: 15px;">
+            <lightning-messages>
+            </lightning-messages>
+            <label for="campaignid">Campaign Name</label>
+            <lightning-input-field id="campaignid" variant="label-hidden" field-name="CampaignId">
+            </lightning-input-field>
+            
+        </div>
+        <div>
+            <lightning-button class="slds-m-top_small" style="color: green;" variant="brand" type="submit" name="submit" label="Submit">
+            </lightning-button>
+        </div>
+    </lightning-record-edit-form>
+</template>

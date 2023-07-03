@@ -1,0 +1,38 @@
+<template>
+    <template if:true={showSearchComponent}>
+        <article class="slds-card slds-page-header slds-page-header_record-home">
+            <div class="slds-page-header__row">
+                <div class="slds-page-header__col-title">
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <lightning-icon icon-name="standard:campaign" size="medium" alternative-text="Campaign"></lightning-icon>
+                        </div>
+                        <div class="slds-media__body" style="line-height: 20px;">
+                            <span class="slds-page-header__title slds-truncate" title={searchHelpTitle}>{searchHelpTitle}</span>
+                            <span>{searchHelpText}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-card__body">
+                <div style="width: 60%; margin: auto;">
+                    <c-search-input oncampaignfilterapplied={handleCampaignFilter}></c-search-input>
+                </div>
+            </div>
+        </article>
+    </template>
+    <template if:false={showSearchComponent}>
+        <article class="slds-card">
+            <div class=" margin: auto;">
+                <c-custom-highlight-panel object-api-name={objectApiName} record-id={campaignId} field-list={fieldList}></c-custom-highlight-panel>
+            </div>
+            <div class="slds-card__body">
+                <div style="width: 80%; margin: auto;">
+                </div>
+                <c-opportunities-result apex-name={apexName} param={param}></c-opportunities-result>
+                <span onclick={checkAnotherCampaign} class="slds-text-link" style="color: green;">Check another campaign</span></a>
+            </div>
+        </article>
+    </template>
+    
+</template>
